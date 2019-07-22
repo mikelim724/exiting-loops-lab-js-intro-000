@@ -17,3 +17,15 @@ function keepGoing(array, changeValue, skipValue){
   }
   return array
 }
+
+function findBy(array findFn) {
+  var findval = false; 
+  for (var i = 0; i < array.length; i++) {
+    if(findFn(array[i])===true){
+      return array[i]
+    }
+  }
+  if(findval) {
+    return null
+  }
+}
